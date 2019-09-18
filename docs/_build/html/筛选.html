@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>筛选 &mdash; Oak 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="标签" href="标签.html" />
+    <link rel="prev" title="字段" href="字段.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Oak
+          
+
+          
+            
+            <img src="_static/oak-tree.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="概述.html">概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="版本.html">版本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="字段.html">字段</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">筛选</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">添加筛选</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">筛选应用</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="标签.html">标签</a></li>
+<li class="toctree-l1"><a class="reference internal" href="配置.html">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="权限.html">权限</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">dashboard</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Oak</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>筛选</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/筛选.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>筛选<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id2">
+<h2>介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>筛选是oak核心功能，支持三种方式的条件输入：标签、用户id、自定义</p>
+<ol class="arabic">
+<li><p class="first">标签：</p>
+<p>标签是各位在Oak里通过前期探索而沉淀下的条件集合，如“淘宝高消费人群”，添加标签可以极大的加速整个筛选过程，也可以直观的了解用户的各维度数据。</p>
+</li>
+<li><p class="first">用户id：</p>
+<p>查看某一个/多个用户的数据时使用，例如可以查看某一批用户的标签命中情况或条件满足情况。</p>
+</li>
+<li><p class="first">自定义：</p>
+<p>支持任意维度的条件组合。</p>
+</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>添加筛选<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>可以同时使用标签、用户id、自定义三种方式中的多种或一种
+<img alt="p9" src="_images/p9.png" /></p>
+<ol class="arabic">
+<li><p class="first">标签：</p>
+<p>选择相应的标签，输入框支持搜索，点击标签会显示该标签的条件。</p>
+</li>
+<li><p class="first">用户id：</p>
+<p>多个id时，从任意地方复制（navicat、excel、网页等），在输入框里粘贴即可。</p>
+</li>
+<li><p class="first">自定义：</p>
+<p>自定义有三元素：字段、操作、值。</p>
+</li>
+</ol>
+<p><strong>需要注意的是在输入值的时候，下拉列表里只是提示，并不代表该字段全部值</strong></p>
+<p><img alt="p10" src="_images/p10.png" /></p>
+<p>保存完筛选后，点击操作中计算按钮开始计算。</p>
+</div>
+<div class="section" id="id4">
+<h2>筛选应用<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>计算成功的筛选，点击结果，主要有以下应用：</p>
+<ol class="arabic">
+<li><p class="first">明细的查看与输出：</p>
+<p>点击明细，可以查看本次筛选命中的用户以及详细信息，点击字段按钮可以添加想要查看的字段，支持API、CSV两种方式的导出
+<img alt="p11" src="_images/p11.png" />
+点击某一用户，即可看到该用户的全部明细以及全部标签</p>
+<p><em>请勿泄露api中的Authorization信息，因个人泄露行为产生的法律问题oak系统概不负责</em></p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="2">
+<li><p class="first">用户画像与分析：
+<img alt="p12" src="_images/p12.png" />
+添加字段，选择Bin方式，如不采用默认Bin方案，点击划分按钮划分,可以点击调色盘调整图的样式。</p>
+<ol class="arabic simple">
+<li>一键划分：
+自动将字段划分为N段</li>
+<li>手动划分：
+点击添加，第一个输入框为Bin名称，第二个为Bin包含的区间/枚举值</li>
+</ol>
+<p><img alt="p13" src="_images/p13.png" />
+数值型与字符型的划分方式有所不同，请注意。</p>
+<p>高级选项里有剩余项可以添加</p>
+<p>选择两个字段时，绘制二维散点图与二维数据透视表。
+<img alt="p14" src="_images/p14.png" /></p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="标签.html" class="btn btn-neutral float-right" title="标签" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="字段.html" class="btn btn-neutral float-left" title="字段" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, 数模产品组
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
